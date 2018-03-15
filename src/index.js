@@ -31,8 +31,10 @@ class SmartCalculator {
     }
 
     pow(number) {
-      this.array[this.array.length-1] = Math.pow(this.array[this.array.length-1], number);
-      return this;
+        this.array.push('**');
+        this.array.push(number);
+        //this.array[this.array.length-1] = Math.pow(this.array[this.array.length-1], number);
+        return this;
     }
 
     valueOf() {
@@ -40,6 +42,7 @@ class SmartCalculator {
       for (var i = 0; i < this.array.length; i++) {
         this.string = this.string + this.array[i];
       }
+
       return eval(this.string);
     }
 }
