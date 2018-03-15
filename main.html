@@ -1,6 +1,20 @@
-class SmartCalculator {
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
 
-  constructor(initialValue) {
+
+
+
+<script>
+
+
+	class SmartCalculator {
+
+		constructor(initialValue) {
       this.array = []
       this.array.push(initialValue);
       this.string = '';
@@ -40,8 +54,31 @@ class SmartCalculator {
       for (var i = 0; i < this.array.length; i++) {
         this.string = this.string + this.array[i];
       }
+      console.log(this.string);
       return eval(this.string);
     }
-}
 
-module.exports = SmartCalculator;
+		 	
+
+	}
+
+	
+
+
+const calculator = new SmartCalculator(9);
+
+const value = calculator.add(71)
+      .add(2)
+      .add(63)
+      .pow(1)
+      .pow(1)
+      .pow(2)
+      .multiply(2)
+      .add(24);
+
+	console.log(value.string);
+
+</script>
+	
+</body>
+</html>
